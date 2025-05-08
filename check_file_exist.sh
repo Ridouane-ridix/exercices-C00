@@ -1,10 +1,10 @@
 #!/bin/bash
 # Ce script vérifie si un fichier donné existe
 
-read -f "Entrez le nom du fichier : " filename
+read -p "Entrez le nom du fichier : " filename
 
 # Vérifie si l'utilisateur a entré quelque chose
-if [ -f "$filename" ]; then
+if [ -z "$filename" ]; then
     echo "Erreur : aucun nom de fichier entré."
     exit 1
 fi
